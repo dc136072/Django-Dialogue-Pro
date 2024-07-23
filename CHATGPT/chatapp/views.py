@@ -5,9 +5,9 @@ def index(request):
     context = {}
     return render(request, 'chatapp/index.html', context)
 
-def signIn(request):
+def login(request):
     context = {}
-    return render(request, 'chatapp/signIn.html', context)
+    return render(request, 'chatapp/login.html', context)
 
 def signUp(request):
     context = {}
