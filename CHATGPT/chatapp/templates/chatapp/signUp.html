@@ -14,26 +14,16 @@
     <div class="form-container">
         <h2>ChatGPT</h2>
         <h4>Signup Form</h4>
-        <form action="">
-            <div class="input">
-                <input type="text" class="form-control" placeholder="Enter username">
-                <!-- <small>Username has been taken</small> -->
-            </div>
+        <form action="" method = 'POST'>
+            {% csrf_token %}
+
+            {% for field in form %}
             
             <div class="input">
-                <input type="email" name="" id="" class="form-control" placeholder="Enter email">
-                <!-- <small>Username has been taken</small> -->
+                {{field}}
             </div>
 
-            <div class="input">
-                <input type="password" name="" id="" class="form-control" placeholder="Enter password">
-                <!-- <small>Username has been taken</small> -->
-            </div>
-
-            <div class="input">
-                <input type="password" name="" id="" class="form-control" placeholder="Confirm Password">
-                <!-- <small>Username has been taken</small> -->
-            </div>
+            {% endfor %}
 
             <div class="d-grid gap-2">
                 <button class="btn btn-primary" type="submit">Create account</button>
